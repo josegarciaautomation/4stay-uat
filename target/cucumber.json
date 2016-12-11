@@ -1,0 +1,120 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1656812141,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.setUp()"
+            }
+          }
+        ],
+        "line": 31,
+        "name": "Guest Error massage with wrong email",
+        "description": "",
+        "id": "fourstay-login-with-invalid-credentials;guest-error-massage-with-wrong-email",
+        "after": [
+          {
+            "result": {
+              "duration": 141236858,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3698272129,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "I am on the fourstay homepage",
+            "match": {
+              "location": "FourStayLoginSteps.i_am_on_the_fourstay_homepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 80154537,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "I click Login link",
+            "match": {
+              "location": "FourStayLoginSteps.i_click_Login_link()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 681425822,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "I login with email \"testguestuserb@yahoo.com\" and password \"password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "testguestuserb@yahoo.com",
+                  "offset": 20
+                },
+                {
+                  "val": "password",
+                  "offset": 60
+                }
+              ],
+              "location": "FourStayNegativeLoginSteps.i_login_with_email_and_password(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 813293848,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "I should see \"Something went wrong\" message",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Something went wrong",
+                  "offset": 14
+                }
+              ],
+              "location": "FourStayLoginSteps.i_should_see_message(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 30,
+            "name": "@Test"
+          }
+        ]
+      }
+    ],
+    "name": "FourStay login with invalid credentials",
+    "description": "\n3. As a Guest, I should see login button disabled when I enter incorrect email format\n4. As a Guest, I should see login button disabled when I enter email is blank\n5. As a Guest, I should see login button disabled when I enter password is blank\n6. As a Guest, I should be able to see an error message when I try to login with a wrong email\n7. As a Guest, I should be able to see an error message when I try to login with a wrong password\n9. As a Host, I should be able to see an error message when I try to login with a wrong email\n10. As a Host, I should be able to see an error message when I try to login with a wrong password",
+    "id": "fourstay-login-with-invalid-credentials",
+    "keyword": "Feature",
+    "uri": "com/fourstay/features/login/fourStayNegativeLogin.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@Regression"
+      }
+    ]
+  }
+]
