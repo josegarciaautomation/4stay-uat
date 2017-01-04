@@ -2,7 +2,7 @@ package com.fourstay.utilities;
 
 public class TestInputs {
 	
-	public static final String BASE_URL = "http://ec2-52-37-67-115.us-west-2.compute.amazonaws.com:3000/";
+	public static final String BASE_URL = "http://fourstay.herokuapp.com";
 	
 	// Credentials
 	public static final String GUEST_USER_FIRSTNAME = "Stewart";

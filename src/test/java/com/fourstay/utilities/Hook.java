@@ -60,17 +60,17 @@ public class Hook {
 		// take a screenshot if scenario fails
 		// Jenkins is not working well with the screenshot
 //		Browser.takeScreenshot("/Users/pepe/Desktop/Docs/Cybertek/Cucumber/Screenshots/test2.png");
-		if (scenario.isFailed()) {
-	        try {
-	            byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-	            scenario.embed(screenshot, "image/png" );
-	            scenario.write("URL at failure: " + driver.getCurrentUrl());
-	        } catch (WebDriverException wde) {
-	        	scenario.write("Embed Failed " + wde.getMessage());
-	        } catch (ClassCastException cce) {
-	            cce.printStackTrace();
-	        }
-	    }
+//		if (scenario.isFailed()) {
+//	        try {
+//	            byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+//	            scenario.embed(screenshot, "image/png" );
+//	            scenario.write("URL at failure: " + driver.getCurrentUrl());
+//	        } catch (WebDriverException wde) {
+//	        	scenario.write("Embed Failed " + wde.getMessage());
+//	        } catch (ClassCastException cce) {
+//	            cce.printStackTrace();
+//	        }
+//	    }
     
 //		if (scenario.isFailed()) {
 //			final byte[] screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);

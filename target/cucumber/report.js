@@ -13,7 +13,7 @@ formatter.feature({
   ]
 });
 formatter.before({
-  "duration": 1724503828,
+  "duration": 2471854171,
   "status": "passed"
 });
 formatter.background({
@@ -37,14 +37,14 @@ formatter.match({
   "location": "FourStayLoginSteps.i_am_on_the_fourstay_homepage()"
 });
 formatter.result({
-  "duration": 4560507316,
+  "duration": 4573117262,
   "status": "passed"
 });
 formatter.match({
   "location": "FourStayLoginSteps.i_click_Login_link()"
 });
 formatter.result({
-  "duration": 113167612,
+  "duration": 139432820,
   "status": "passed"
 });
 formatter.scenario({
@@ -76,7 +76,7 @@ formatter.step({
 });
 formatter.step({
   "line": 14,
-  "name": "I should see \"xxStewart Vance\" message",
+  "name": "I should see \"Stewart Vance\" message",
   "keyword": "Then "
 });
 formatter.match({
@@ -89,27 +89,27 @@ formatter.match({
   "location": "FourStayLoginSteps.i_enter_credentials(String)"
 });
 formatter.result({
-  "duration": 619080389,
+  "duration": 961201323,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "xxStewart Vance",
+      "val": "Stewart Vance",
       "offset": 14
     }
   ],
   "location": "FourStayLoginSteps.i_should_see_message(String)"
 });
 formatter.result({
-  "duration": 10054718461,
-  "error_message": "java.lang.AssertionError: Partial Text not displayed: xxStewart Vance-\u003eElement not found\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat com.fourstay.utilities.Browser.verifyPartialText(Browser.java:40)\n\tat com.fourstay.step_definitions.FourStayLoginSteps.i_should_see_message(FourStayLoginSteps.java:74)\n\tat ✽.Then I should see \"xxStewart Vance\" message(com/fourstay/features/login/fourStayPositiveLogin.feature:14)\n",
+  "duration": 10096153680,
+  "error_message": "java.lang.AssertionError: Partial Text not displayed: Stewart Vance-\u003eElement not found\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat com.fourstay.utilities.Browser.verifyPartialText(Browser.java:40)\n\tat com.fourstay.step_definitions.FourStayLoginSteps.i_should_see_message(FourStayLoginSteps.java:74)\n\tat ✽.Then I should see \"Stewart Vance\" message(com/fourstay/features/login/fourStayPositiveLogin.feature:14)\n",
   "status": "failed"
 });
 formatter.embedding("image/png", "embedded0.png");
-formatter.write("URL at failure: http://ec2-52-37-67-115.us-west-2.compute.amazonaws.com:3000/dashboard/#/host");
+formatter.write("URL at failure: http://fourstay.herokuapp.com/");
 formatter.after({
-  "duration": 960177194,
+  "duration": 2100527792,
   "status": "passed"
 });
 });
