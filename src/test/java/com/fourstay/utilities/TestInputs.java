@@ -5,9 +5,9 @@ public class TestInputs {
 	public static final String BASE_URL = "http://fourstay.herokuapp.com";
 	
 	// Credentials
-	public static final String GUEST_USER_FIRSTNAME = "Stewart";
-	public static final String GUEST_USER_LASTNAME = "Vance";
-	public static final String GUEST_USER_ID = "stvance@maileme101.com";
+	public static final String GUEST_USER_FIRSTNAME = "Mehu";
+	public static final String GUEST_USER_LASTNAME = "Dojoh";
+	public static final String GUEST_USER_ID = "mehudojoh@zain.site";
 	public static final String GUEST_USER_PWD = "password";
 	
 	public static final String HOST_USER_FIRSTNAME = "TestHost";

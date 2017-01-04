@@ -11,7 +11,7 @@ Background:
 @Smoke @Logintest @Test
 Scenario: Guest logs in with correct credentials
 	When I enter "guest" credentials
-	Then I should see "Stewart Vance" message
+	Then I should see "Mehu Dojoh" message
 	
 @Smoke @Logintest
 Scenario: Host logs in with correct credentials
