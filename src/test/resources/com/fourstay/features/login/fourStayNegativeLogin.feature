@@ -9,7 +9,7 @@ Feature: FourStay login with invalid credentials
 9. As a Host, I should be able to see an error message when I try to login with a wrong email
 10. As a Host, I should be able to see an error message when I try to login with a wrong password
 
-
+@Smoke
 Scenario: Guest-LoginButton Disabled with incorrect email format
 	Given I am on the fourstay homepage
 	Then I click Login link
@@ -27,7 +27,7 @@ Scenario: Guest-LoginButton Disabled with blank password
 	Then I click Login link
 	When I enter email "testguestuserb@zain.site" and password ""
 	Then login button should disabled
-@Test	
+#@Test	
 Scenario: Guest Error massage with wrong email
 	Given I am on the fourstay homepage
 	Then I click Login link

@@ -1,6 +1,5 @@
 package com.fourstay.pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -48,6 +47,9 @@ public class HomePage extends Base{
 	
 	@FindBy(xpath = "//*[contains(text(),'Something went wrong')]")
 	public WebElement wentWrongError;
+	
+	@FindBy(id="themates")
+	public WebElement bedOptions;
 	
 	public void enterCredentials(String email, String password) {
 		inputEmail.sendKeys(email);

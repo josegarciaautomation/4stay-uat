@@ -1,15 +1,15 @@
 package com.fourstay.utilities;
 
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
-
-import com.gargoylesoftware.htmlunit.httpclient.HtmlUnitBrowserCompatCookieHeaderValueFormatter;
 
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
@@ -20,10 +20,10 @@ public class Hook {
 	
 	public static final String CHROME_DRIVER = "webdriver.chrome.driver";
 	public static final String CHROME_DRIVER_PATH = 
-			"./src/test/resources/browsers/chromedriver";
+			"./src/test/resources/drivers/chromedriver";
 	public static final String FIREFOX_DRIVER = "webdriver.gecko.driver";
 	public static final String FIREFOX_DRIVER_PATH = 
-			"./src/test/resources/browsers/geckodriver";
+			"./src/test/resources/drivers/geckodriver";
 	
 	@Before
 	public void setUp() throws Exception {
@@ -34,13 +34,14 @@ public class Hook {
 		System.out.println(browser);
 		if (driver==null || ((RemoteWebDriver)driver).getSessionId()==null) {
 			switch (browser) {
-			case "chrome":
-				System.setProperty(CHROME_DRIVER, CHROME_DRIVER_PATH);
-				driver = new ChromeDriver();
-				break;
 			case "firefox":
 				System.setProperty(FIREFOX_DRIVER, FIREFOX_DRIVER_PATH);
 				driver = new FirefoxDriver();
+				break;
+			case "chrome":
+			default:
+				System.setProperty(CHROME_DRIVER, CHROME_DRIVER_PATH);
+				driver = new ChromeDriver();
 				break;
 			}
 			
@@ -57,11 +58,25 @@ public class Hook {
 	@After
 	public void tearDown(Scenario scenario) throws Exception {
 		// take a screenshot if scenario fails
+		// Jenkins is not working well with the screenshot
 //		Browser.takeScreenshot("/Users/pepe/Desktop/Docs/Cybertek/Cucumber/Screenshots/test2.png");
 		if (scenario.isFailed()) {
-			final byte[] screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
-			scenario.embed(screenshot, "image/png");
-		}
+	        try {
+	            byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+	            scenario.embed(screenshot, "image/png" );
+	            scenario.write("URL at failure: " + driver.getCurrentUrl());
+	        } catch (WebDriverException wde) {
+	        	scenario.write("Embed Failed " + wde.getMessage());
+	        } catch (ClassCastException cce) {
+	            cce.printStackTrace();
+	        }
+	    }
+    
+//		if (scenario.isFailed()) {
+//			final byte[] screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
+//			scenario.embed(screenshot, "image/png");
+//		}
+		
 		if (driver != null) {
 			driver.quit();
 		}

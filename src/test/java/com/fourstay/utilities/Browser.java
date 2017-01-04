@@ -57,4 +57,8 @@ public class Browser extends Base{
 		System.out.println(e.getMessage());
 		}
 	 }
+	 
+	 public static void sleep (int millis) throws InterruptedException {
+		 Thread.sleep(millis);
+	 }
 }

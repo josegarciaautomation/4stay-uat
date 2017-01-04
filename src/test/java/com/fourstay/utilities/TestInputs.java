@@ -5,9 +5,9 @@ public class TestInputs {
 	public static final String BASE_URL = "http://ec2-52-37-67-115.us-west-2.compute.amazonaws.com:3000/";
 	
 	// Credentials
-	public static final String GUEST_USER_FIRSTNAME = "TestGuest";
-	public static final String GUEST_USER_LASTNAME = "UserB";
-	public static final String GUEST_USER_ID = "testguestuserb@zain.site";
+	public static final String GUEST_USER_FIRSTNAME = "Stewart";
+	public static final String GUEST_USER_LASTNAME = "Vance";
+	public static final String GUEST_USER_ID = "stvance@maileme101.com";
 	public static final String GUEST_USER_PWD = "password";
 	
 	public static final String HOST_USER_FIRSTNAME = "TestHost";

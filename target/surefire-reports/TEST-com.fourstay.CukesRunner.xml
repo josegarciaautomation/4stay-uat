@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.fourstay.CukesRunner" time="0.163" tests="5" errors="0" skipped="0" failures="0">
+<testsuite name="com.fourstay.CukesRunner" time="0.016" tests="5" errors="0" skipped="0" failures="2">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="cucumber.options" value="--tags @Test"/>
@@ -32,7 +32,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="10.12.1"/>
+    <property name="os.version" value="10.12.2"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="user.home" value="/Users/pepe"/>
     <property name="user.timezone" value="America/New_York"/>
@@ -62,9 +62,25 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="Given I am on the fourstay homepage" classname="Scenario: Guest Error massage with wrong email" time="0.001"/>
-  <testcase name="Then I click Login link" classname="Scenario: Guest Error massage with wrong email" time="0"/>
-  <testcase name="When I login with email &quot;testguestuserb@yahoo.com&quot; and password &quot;password&quot;" classname="Scenario: Guest Error massage with wrong email" time="0"/>
-  <testcase name="Then I should see &quot;Something went wrong&quot; message" classname="Scenario: Guest Error massage with wrong email" time="0"/>
-  <testcase name="Scenario: Guest Error massage with wrong email" classname="Scenario: Guest Error massage with wrong email" time="0.162"/>
+  <testcase name="Given I am on the fourstay homepage" classname="Scenario: Guest logs in with correct credentials" time="0.003"/>
+  <testcase name="And I click Login link" classname="Scenario: Guest logs in with correct credentials" time="0.001"/>
+  <testcase name="When I enter &quot;guest&quot; credentials" classname="Scenario: Guest logs in with correct credentials" time="0"/>
+  <testcase name="Then I should see &quot;xxStewart Vance&quot; message" classname="Scenario: Guest logs in with correct credentials" time="0.006">
+    <failure message="Partial Text not displayed: xxStewart Vance-&gt;Element not found" type="java.lang.AssertionError">java.lang.AssertionError: Partial Text not displayed: xxStewart Vance->Element not found
+	at org.junit.Assert.fail(Assert.java:88)
+	at com.fourstay.utilities.Browser.verifyPartialText(Browser.java:40)
+	at com.fourstay.step_definitions.FourStayLoginSteps.i_should_see_message(FourStayLoginSteps.java:74)
+	at ✽.Then I should see "xxStewart Vance" message(com/fourstay/features/login/fourStayPositiveLogin.feature:14)
+</failure>
+    <system-out><![CDATA[xxStewart Vance
+]]></system-out>
+  </testcase>
+  <testcase name="Scenario: Guest logs in with correct credentials" classname="Scenario: Guest logs in with correct credentials" time="0.006">
+    <failure message="Partial Text not displayed: xxStewart Vance-&gt;Element not found" type="java.lang.AssertionError">java.lang.AssertionError: Partial Text not displayed: xxStewart Vance->Element not found
+	at org.junit.Assert.fail(Assert.java:88)
+	at com.fourstay.utilities.Browser.verifyPartialText(Browser.java:40)
+	at com.fourstay.step_definitions.FourStayLoginSteps.i_should_see_message(FourStayLoginSteps.java:74)
+	at ✽.Then I should see "xxStewart Vance" message(com/fourstay/features/login/fourStayPositiveLogin.feature:14)
+</failure>
+  </testcase>
 </testsuite>
